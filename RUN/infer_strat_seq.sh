@@ -1,0 +1,21 @@
+# rlaunch --cpu=4 --gpu=1 --memory=10240 -- python -m pdb infer.py \
+CUDA_VISIBLE_DEVICES=0 python infer.py \
+    --config_name strat_seq \
+    --inputter_name strat_seq \
+    --add_nlg_eval \
+    --seed 0 \
+    --load_checkpoint ./DATA/strat_seq.strat_seq/2022-06-20180516.3e-05.16.2gpu/epoch-4.bin \
+    --fp16 false \
+    --max_input_length 160 \
+    --max_decoder_input_length 40 \
+    --max_length 40 \
+    --min_length 10 \
+    --infer_batch_size 8 \
+    --infer_input_file ./_reformat/test.txt \
+    --temperature 0.7 \
+    --top_k 0 \
+    --top_p 0.9 \
+    --num_beams 1 \
+    --repetition_penalty 1 \
+    --no_repeat_ngram_size 0 \
+    --golden_strategy

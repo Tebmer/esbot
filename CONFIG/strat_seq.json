@@ -1,0 +1,24 @@
+{
+  "model_name": "strat_seq_blenderbot_small",
+  "pretrained_model_path": "./Blenderbot_small-90M",
+  "strat_seq_model_config":{
+    "num_strat": 8,
+    "model_type": "gru",
+    "num_layers": 2,
+    "bidirectional": false,
+    "add_context_method": null
+  },
+  "custom_config_path": null,
+  "gradient_checkpointing": false,
+
+  "strategy_types": [
+    "[Question]",
+    "[Restatement or Paraphrasing]",
+    "[Reflection of feelings]",
+    "[Self-disclosure]",
+    "[Affirmation and Reassurance]",
+    "[Providing Suggestions]",
+    "[Information]",
+    "[Others]"
+  ]
+}
